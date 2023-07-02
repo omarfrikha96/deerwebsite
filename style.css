@@ -1,0 +1,176 @@
+/* golobel style */
+
+*{
+    margin: 0;
+    color: white;
+    font-family: sans-serif;
+}
+
+html {box-sizing: border-box;} 
+*, *:before, *:after {box-sizing: inherit;}  
+
+
+.cover{
+    background-image: url(img/bg-layer.svg);
+    height: 960px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: brown;
+    position: relative;
+}
+
+
+
+
+
+/* header  */
+
+header{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.logo{
+    margin-top: 10px;
+}
+
+#logo-name {
+    display: inline-block;
+    position: relative;
+    top: -20px;
+    font-size: 25px;
+    animation: none;
+}
+
+nav {
+    position: relative;
+    top: 50px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 20px;
+    margin: 10px;
+    opacity: 0.5;
+    transition: all 0.3s;
+}
+
+a:hover{
+    opacity: 1;  
+}
+
+/* middle */
+
+.middle {
+    height: 400px;
+    position: relative;
+    
+    
+}
+
+h1 {
+    text-align: center;
+    font-size: 70px;
+    animation: lettreanni 5s infinite linear;
+}
+
+@keyframes lettreanni {
+    0% , 100% {
+        letter-spacing: 5px;
+    }
+  
+    50% {
+        letter-spacing: 15px;
+    }
+  
+  }
+
+.main-img{
+    width: 400px;
+    display: block;
+    margin: 0 auto;
+    animation: imgmove 10s infinite ;
+  
+}
+
+
+@keyframes imgmove {
+    50% {
+      transform: translateX(50px);
+    }
+  }
+
+.left {
+    position: absolute;
+    top: 55%;
+    left: 10%;
+   
+}
+
+.img-web {
+    height: 60px;
+    transition: all 0.5s;
+}
+
+.img-web:hover{
+    height: 75px;
+}
+
+@media (max-width: 850px) {
+    .left {
+        position: static;
+        text-align: center;
+      
+    }
+}
+
+
+/* wave */
+.wave {
+    height: 143px;
+    position: absolute;
+    width: 100%; 
+    bottom: 0;
+    background-image: url(img/wave.png);
+    animation: waveani 350s infinite;
+  }
+  
+  @keyframes waveani {
+    0% {
+      background-position: 10000px;
+    }
+  
+    50% {
+      background-position: 500px;
+    }
+  
+    100% {
+      background-position: 10000px;
+    }
+  }
+  
+  .wave::before {
+    content: "";
+    background-image: url(img/wave.png);
+    opacity: 0.5; 
+    height: 143px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    animation: waveanirev 250s infinite;
+  }
+  
+  @keyframes waveanirev {
+    0% {
+      background-position: -10000px;
+    }
+  
+    50% {
+      background-position: -500px;
+    }
+  
+    100% {
+      background-position: -10000px;
+    }
+  }
